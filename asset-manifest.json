@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/HM-11Project_order_food/static/css/main.f0ae3f4c.css",
+    "main.js": "/HM-11Project_order_food/static/js/main.3f0d7581.js",
+    "static/media/mainImg.jpg": "/HM-11Project_order_food/static/media/mainImg.0b28892d5515857671bc.jpg",
+    "static/media/basketIcon.svg": "/HM-11Project_order_food/static/media/basketIcon.b8d33e94afa151b65893c6647ec288c8.svg",
+    "static/media/plus.svg": "/HM-11Project_order_food/static/media/plus.ed76b8c3b94061a839968346f135ab67.svg",
+    "index.html": "/HM-11Project_order_food/index.html",
+    "main.f0ae3f4c.css.map": "/HM-11Project_order_food/static/css/main.f0ae3f4c.css.map",
+    "main.3f0d7581.js.map": "/HM-11Project_order_food/static/js/main.3f0d7581.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0ae3f4c.css",
+    "static/js/main.3f0d7581.js"
+  ]
+}
