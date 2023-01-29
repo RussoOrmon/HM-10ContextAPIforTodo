@@ -6,7 +6,6 @@ const Button = ({children, variant='contained',borderStyle='rounded'}) => {
     <Container borderStyle={borderStyle} variant={variant} >{children}</Container>
   )
 }
-
 export default Button;
 
 const getBackground = (props)=>{
@@ -21,7 +20,6 @@ const getColor = (props)=>{
 const getBorderRadius = (props)=>{
   return props.variant==="rounded" ? '20px' : "6px"
 }
-
 
 const Container=styled.button`
     background: ${getBackground};

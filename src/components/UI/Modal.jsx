@@ -1,6 +1,6 @@
 import React from "react";
-import { createPortal } from "react-dom";
 import styled from "styled-components";
+import { createPortal } from "react-dom";
 
 const Backdrop = ({ onClose }) => {
   return <StyledBackdrop onClick={onClose} />;

@@ -1,10 +1,10 @@
-import styled from "styled-components";
 import React from "react";
+import styled from "styled-components";
 import Button from "../UI/Button";
 
 const TotalAmount = ({ price, onClose, onOrder }) => {
   const orderButton =
-    price > 0 ? <Button  onClick={onOrder}> Order </Button> : null;
+    price > 0 ? <Button onClick={onOrder}> Order </Button> : null;
 
   const fixedPrice = price.toFixed(2);
   return (
@@ -17,7 +17,6 @@ const TotalAmount = ({ price, onClose, onOrder }) => {
         <Button onClick={onClose} variant="outlined">
           Close
         </Button>
-
         {orderButton}
       </ActionButton>
     </>
@@ -55,8 +54,7 @@ const ActionButton = styled.div`
   justify-content: flex-end;
   margin-top: 24px;
   gap: 1rem;
-  & button{
-      border-radius: 20px;
-
+  & button {
+    border-radius: 20px;
   }
 `;

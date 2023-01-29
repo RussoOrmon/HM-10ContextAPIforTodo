@@ -12,7 +12,6 @@ function App() {
         <Basket />
       <Content>
         <Summary />
-        {/*<Inform />*/}
         <Meals />
       </Content>
     </div>

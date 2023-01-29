@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../UI/Button";
+import styled from "styled-components";
 import { ReactComponent as Minus } from "../../assets/icons/minusBrown.svg";
 import { ReactComponent as Plus } from "../../assets/icons/plusBrown.svg";
-import styled from "styled-components";
 
 const BasketItem = ({ title, price, amount }) => {
   return (
