@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="App">
       <Header />
+        <Basket />
       <Content>
         <Summary />
         {/*<Inform />*/}
         <Meals />
-        <Basket />
       </Content>
     </div>
   );

@@ -21,7 +21,7 @@ const Container =styled.div`
 width:  100%;
 /*height: 101px;*/
 position: fixed;
-z-index: 90;
+z-index: 11;
 top: 0;
 background-color:#8A2B06;
 display: flex;

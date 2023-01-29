@@ -33,8 +33,6 @@ const BasketButtonStyled = styled.button`
     background-color: #672003;
   }
 
-
-
   & span {
     margin-left: 12px;
     margin-right: 15px;
