@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../UI/Button";
 
-const TotalAmount = ({ price, onClose, onOrder }) => {
+const TotalAmount = ({ price, onClose, onOrder  }) => {
+
   const orderButton =
     price > 0 ? <Button onClick={onOrder}> Order </Button> : null;
 
@@ -11,10 +12,10 @@ const TotalAmount = ({ price, onClose, onOrder }) => {
     <>
       <InfoConteiner>
         <Label>Total amount</Label>
-        <StyledPrice>$ {fixedPrice}</StyledPrice>
+        <Price>$ {fixedPrice}</Price>
       </InfoConteiner>
       <ActionButton>
-        <Button onClick={onClose} variant="outlined">
+        <Button onClick={onClose} variant="outlined"  >
           Close
         </Button>
         {orderButton}
@@ -35,7 +36,7 @@ const Label = styled.p`
   margin: 0;
 `;
 
-const StyledPrice = styled.p`
+const Price = styled.p`
   font-style: normal;
   font-weight: 600;
   font-size: 22px;

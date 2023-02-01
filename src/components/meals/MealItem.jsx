@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+
 import MealItemForm from "./MealItemForm";
 
 const MealItem = ({ title, description, price, id }) => {
@@ -10,7 +10,7 @@ const MealItem = ({ title, description, price, id }) => {
         <StyledText>{description}</StyledText>
         <span>$ {price}</span>
       </StyledItemInfo>
-      <MealItemForm id={id} />
+      <MealItemForm id={id} title={title} price={price} />
     </StyledMealItem>
   );
 };

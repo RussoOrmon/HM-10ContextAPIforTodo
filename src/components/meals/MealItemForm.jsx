@@ -1,17 +1,49 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { ReactComponent as Plus } from "../../assets/icons/plus.svg";
+import { ReactComponent as Plus } from "../../assets/icons/plusBrown.svg";
+import { BasketContext } from "../../store/BasketContext";
 
-const MealItemForm = ({ id }) => {
+const MealItemForm = ({ id, title, price }) => {
+
+  //console.log(title)
+  
+  const { addToBasket } = useContext(BasketContext);
+  
+  const [amount, setAmount] = useState(1);
+  const amountChangeHandler = (e) => {
+    setAmount(+e.target.value);
+  };
+
+
+  const submitHandler=(e)=>{
+    e.preventDefault()
+
+    const basketItem={
+      id,
+      title,
+      price,
+      amount,
+    };
+
+    console.log(basketItem);
+    addToBasket({ basketItem})
+  }
+
   return (
-    <StyledMealForm>
+    <StyledMealForm onSubmit={submitHandler}>
       <StyledInput>
         <label htmlFor={id}> Amount </label>
-        <InputStyled type="number" id={id} min={1} defaultValue={1} />
+        <InputStyled
+          value={amount}
+          onChange={amountChangeHandler}
+          type="number"
+          id={id}
+          min={1}
+          //defaultValue={1}
+        />
       </StyledInput>
       <ButtonStyled>
-        
-        <Plus /> <span> Add</span>
+        <PlusButton /> <span> Add</span>
       </ButtonStyled>
     </StyledMealForm>
   );
@@ -60,9 +92,8 @@ const ButtonStyled = styled.button`
   align-items: center;
   /*gap: 10px;*/
 
-
   & span {
-    margin-left: 12px;
+    margin-left: 10px;
   }
 
   &:hover {
@@ -71,5 +102,12 @@ const ButtonStyled = styled.button`
 
   &:active {
     background-color: #993108;
+  }
+`;
+
+const PlusButton = styled(Plus)`
+   * {
+    stroke: #ffffff;
+    /*fill: #8a2b06;*/
   }
 `;

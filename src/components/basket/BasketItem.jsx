@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../UI/Button";
 import styled from "styled-components";
 import { ReactComponent as Minus } from "../../assets/icons/minusBrown.svg";
 import { ReactComponent as Plus } from "../../assets/icons/plusBrown.svg";
+import { BasketContext } from "../../store/BasketContext";
 
-const BasketItem = ({ title, price, amount }) => {
+
+const BasketItem = ({ id, title, price, amount, incrementAmount, decrementAmount }) => {
+
+  console.log("URAAAA", title)
+  console.log("URAAAA", amount)
+  
   return (
-    <Container>
+    <Container  >
       <Title> {title} </Title>
-      <Content>
+      <Content  >
         <PriceAndAmount>
           <Price>$ {price}</Price>
-          <Amount>x {amount}</Amount>
+          <Amount>x{amount}</Amount>
         </PriceAndAmount>
         <CounterConteiner>
-          <Button borderStyle="squared" variant="outlined">
+          <Button borderStyle="squared" variant="outlined" onClick={decrementAmount}  >
             <MinusButton />
           </Button>
 
-          <Button borderStyle="squared" variant="outlined">
+          <Button onClick={incrementAmount}  borderStyle="squared" variant="outlined">
             <PlusButton className="plus" />
           </Button>
         </CounterConteiner>
@@ -29,8 +35,8 @@ const BasketItem = ({ title, price, amount }) => {
 
 export default BasketItem;
 
-const Container = styled.p`
-  padding: 4px 0 12px 0;
+const Container = styled.div`
+  padding: 20px 0 12px 0;
   width: 98%;
   border-bottom: 1px solid 
 #D6D6D6 ;
