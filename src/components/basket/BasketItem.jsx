@@ -3,7 +3,6 @@ import Button from "../UI/Button";
 import styled from "styled-components";
 import { ReactComponent as Minus } from "../../assets/icons/minusBrown.svg";
 import { ReactComponent as Plus } from "../../assets/icons/plusBrown.svg";
-import { BasketContext } from "../../store/BasketContext";
 
 
 const BasketItem = ({ id, title, price, amount, incrementAmount, decrementAmount }) => {

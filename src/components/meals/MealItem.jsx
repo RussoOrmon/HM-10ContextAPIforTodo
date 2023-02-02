@@ -4,7 +4,7 @@ import MealItemForm from "./MealItemForm";
 
 const MealItem = ({ title, description, price, id }) => {
   return (
-    <StyledMealItem>
+    <StyledMealItem >
       <StyledItemInfo>
         <StyledTitle>{title}</StyledTitle>
         <StyledText>{description}</StyledText>

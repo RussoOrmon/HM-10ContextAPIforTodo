@@ -57,10 +57,10 @@ const Meals = () => {
   return (
     <StyledMeals>
       <ul>
-        {meals.map((meal) => {
+        {meals.map((meal, index) => {
           return (
             <MealItem
-              key={meal.id}
+              key={meal._id}
               title={meal.title}
               description={meal.description}
               price={meal.price}

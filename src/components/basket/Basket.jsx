@@ -7,39 +7,8 @@ import BasketItem from "./BasketItem";
 import TotalAmount from "./TotalAmount";
 
 const Basket = ({ onCloseBasket }) => {
-  //const { items, updateBasketItem } = useContext(BasketContext);
+  const { items, updateBasketItem, deleteBasketItem } = useContext(BasketContext);
   
-  const items=[
-      {
-      title: "Sushi",
-      description: "Finest fish and veggies",
-      price: "22.99",
-      id: "meal1",
-      amount:2,
-    },
-    {
-      title: "Schnitzel",
-      description: "A german speciality",
-      price: "16.99",
-      id: "meal2",
-      amount:3,
-    },
-    {
-      title: "Barbecue Burger",
-      description: "American, raw, meaty",
-      price: "12.99",
-      id: "meal3",
-      amount:4,
-    },
-    {
-      title: "Green Bowl",
-      description: "Healthy...and green...",
-      price: "19.99",
-      id: "meal4",
-      amount:2,
-    },
-  ];
-
   const closeModalBasket = () => {
     onCloseBasket();
   };
@@ -48,15 +17,17 @@ const Basket = ({ onCloseBasket }) => {
     return items.reduce((sum, { price, amount }) => sum + price * amount, 0);
   };
 
-//const decrementAmount=(id, amount)=>{
-//  if(amount > 1){
-//    updateBasketItem({amount:amount -1, id})
-//  }
-//}
+const decrementAmount=(id, amount)=>{
+  if(amount > 1){
+    updateBasketItem({amount: amount-1, id})
+  }else{
+    deleteBasketItem(id)
+  }
+}
 
-//const incrementAmount=(id, amount)=>{
-//  updateBasketItem({amount: amount+1})
-//}
+const incrementAmount=(id, amount)=>{
+  updateBasketItem({amount: amount+1, id})
+}
 
   console.log(items);
   return (
@@ -67,12 +38,12 @@ const Basket = ({ onCloseBasket }) => {
             {items.map((item) => {
               return (
                 <BasketItem
-                  key={item.id}
+                  key={item._id}
                   title={item.title}
                   price={item.price}
                   amount={item.amount}
-                  decrementAmount={()=>{}}
-                  incrementAmount={()=>{}}
+                  decrementAmount={()=>decrementAmount(item._id,  item.amount)}
+                  incrementAmount={()=>incrementAmount(item._id,  item.amount)}
                 />
               );
             })}

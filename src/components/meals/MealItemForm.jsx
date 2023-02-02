@@ -26,7 +26,7 @@ const MealItemForm = ({ id, title, price }) => {
     };
 
     console.log(basketItem);
-    addToBasket({ basketItem})
+    addToBasket(basketItem)
   }
 
   return (
