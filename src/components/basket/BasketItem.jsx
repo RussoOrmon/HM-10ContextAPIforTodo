@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Button from "../UI/Button";
 import styled from "styled-components";
 import { ReactComponent as Minus } from "../../assets/icons/minusBrown.svg";

@@ -36,7 +36,7 @@ const Header = ({ onShowBasket }) => {
       <Logo>ReactMeals</Logo>
       <BasketButton
       
-        className="bump"      //{animationClass}
+        className={animationClass}      
         onShowBasket={onShowBasket}
         count={calculateTotalAmount()}
       />
